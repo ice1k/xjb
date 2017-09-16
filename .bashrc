@@ -53,14 +53,10 @@ fi
 alias ec="emacsclient25 -nw"
 alias en="emacs25 -nw"
 alias ecw="emacsclient25"
-export PATH=/home/ice1000/SDK/flutter/bin:$PATH
-export PATH=/home/ice1000/.gradle/wrapper/dists/gradle-3.4.1-all/c3ib5obfnqr0no9szq6qc17do/gradle-3.4.1/bin:$PATH
+export PATH=/home/ice1000/SDK/flutter/bin:/home/ice1000/.gradle/wrapper/dists/gradle-3.4.1-all/c3ib5obfnqr0no9szq6qc17do/gradle-3.4.1/bin:$PATH
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64/
-export PATH=/opt/ghc/bin:$PATH
-export PATH=/opt/cabal/bin:$PATH
-export PATH=/home/ice1000/SDK/flutter/bin/cache/dart-sdk/bin:$PATH
-export PATH=/home/ice1000/SDK:$PATH
+export PATH=/opt/ghc/bin:/opt/cabal/bin:/home/ice1000/SDK/flutter/bin/cache/dart-sdk/bin:/home/ice1000/SDK:$PATH
 export ANDROID_HOME=/home/ice1000/SDK/tools/
 [ -f /home/ice1000/.travis/travis.sh ] && source /home/ice1000/.travis/travis.sh

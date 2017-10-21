@@ -119,6 +119,7 @@ fi
 alias ec="emacsclient25 -nw"
 alias en="emacs25 -nw"
 alias ecw="emacsclient25 --c"
+alias coffee-machine="emacsclient25 -nw"
 export PATH=/home/ice1000/SDK/flutter/bin:$PATH
 export PATH=/home/ice1000/.gradle/wrapper/dists/gradle-3.4.1-all/c3ib5obfnqr0no9szq6qc17do/gradle-3.4.1/bin:$PATH
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64

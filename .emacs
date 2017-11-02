@@ -3,9 +3,75 @@
 ;;; Code:
 ;;; Commentary:
 
+;; (defvar
+;;   jpk-package-list
+;;   '(auto-complete
+;;     paredit
+;;     paredit-everywhere
+;;     sbt-mode
+;;     scala-mode
+;;     kotlin-mode
+;;     rust-mode
+;;     go-mode
+;;     markdown-mode
+;;     markdown-mode+
+;;     smartparens
+;;     dash
+;;     lua-mode
+;;     haskell-mode
+;;     idris-mode
+;;     csharp-mode
+;;     d-mode
+;;     groovy-mode
+;;     llvm-mode
+;;     jekyll-modes
+;;     flycheck-haskell
+;;     bing-dict))
+
+;; ;; package-install-auto
+;; (defun jpk-package-list-install ()
+;;   "Install uninstalled packages which is in jpk-package-list."
+;;   (interactive)
+;;   (package-initialize)
+;;   (when (not package-archive-contents)
+;;     (package-refresh-contents))
+;;   (dolist (pkg jpk-package-list)
+;;     (when (and (not (package-installed-p pkg))
+;;             (assoc pkg package-archive-contents))
+;;       (package-install pkg))))
+
+;; ;; list the unaccounted packages
+;; (defun package-list-unaccounted-packages ()
+;;   "Like `package-list-packages`, but show only the packages that are installed and are not in jpk-package-list."
+;;   (interactive)
+;;   (package-show-package-list
+;;    (remove-if-not
+;;     (lambda (x) (and (not (memq x jpk-package-list))
+;;                   (not (package-built-in-p x))
+;;                   (package-installed-p x)))
+;;     (mapcar 'car package-archive-contents))))
+ 
 (setq tab-width 2)
 (setq kotlin-tab-width 2)
 (setq java-tab-width 2)
+
+(setq user-full-name "ice1000")
+(setq user-mail-address "ice1000kotlin#foxmail.com")
+
+(display-time-mode 1)
+(setq display-time-24hr-format t)
+(setq display-time-day-and-date t)
+(setq display-time-use-mail-icon t)
+(setq display-time-interval 10)
+(display-time-mode 1)
+(setq display-time-24hr-format t)
+(setq display-time-day-and-date t)
+
+(setq-default make-backup-files nil)
+(setq default-buffer-file-coding-system 'utf-8)
+(setq inhibit-startup-message t)
+(put 'LaTeX-hide-environment 'disabled nil)
+(auto-image-file-mode t)
 
 (require 'package)
 (setq package-archives
@@ -25,6 +91,7 @@
  '(blink-cursor-mode t)
  '(column-number-mode t)
  '(custom-enabled-themes nil)
+ '(display-time-mode t)
  '(flyspell-abbrev-p t)
  '(flyspell-after-incorrect-word-string nil)
  '(font-use-system-font t)
@@ -34,7 +101,8 @@
  '(ispell-program-name "aspell")
  '(package-selected-packages
    (quote
-    (flycheck-kotlin flycheck-julia flycheck-haskell flycheck-color-mode-line flycheck-clang-tidy flycheck-clang-analyzer flycheck-ocaml flycheck-rust zone-sl latex-extra auctex yaml-mode zone-rainbow zone-nyan scala-mode sbt-mode rust-mode ruby-test-mode mode-icons markdown-preview-mode markdown-mode+ llvm-mode kotlin-mode jekyll-modes j-mode indent-guide idris-mode ibuffer-git haskell-mode groovy-mode go-mode gited elm-mode dart-mode d-mode csharp-mode bing-dict ace-flyspell ac-c-headers)))
+    (paredit-everywhere paredit flycheck-kotlin flycheck-julia flycheck-haskell flycheck-color-mode-line flycheck-clang-tidy flycheck-clang-analyzer flycheck-ocaml flycheck-rust zone-sl latex-extra auctex yaml-mode zone-rainbow zone-nyan scala-mode sbt-mode rust-mode ruby-test-mode mode-icons markdown-preview-mode markdown-mode+ llvm-mode kotlin-mode jekyll-modes j-mode indent-guide idris-mode ibuffer-git haskell-mode groovy-mode go-mode gited elm-mode dart-mode d-mode csharp-mode bing-dict ace-flyspell ac-c-headers)))
+ '(paredit-mode t)
  '(show-paren-mode t)
  '(size-indication-mode t))
 
@@ -195,7 +263,7 @@
 (setq gitter-token "")
 
 (require 'zone)
-(zone-when-idle 30)
+(zone-when-idle 120)
 (defun zone-choose (pgm)
   "Choose a PGM to run for `zone'."
   (interactive
@@ -213,6 +281,10 @@
 ;;     (require 'flycheck-kotlin)
 ;;     (flycheck-kotlin-setup)))
 
+(load-file
+ (let ((coding-system-for-read 'utf-8))
+   (shell-command-to-string "agda-mode locate")))
+
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (autoload 'ibuffer "ibuffer" "List buffers." t)
 (custom-set-faces
@@ -220,4 +292,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "Inziu Iosevka Slab SC" :foundry "CYEL" :slant normal :weight normal :height 158 :width normal)))))

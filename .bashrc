@@ -120,18 +120,29 @@ alias ec="emacsclient25 -nw"
 alias en="emacs25 -nw"
 alias ecw="emacsclient25 --c"
 alias coffee-machine="emacsclient25 -nw"
-export PATH=/home/ice1000/SDK/flutter/bin:$PATH
-export PATH=/home/ice1000/.gradle/wrapper/dists/gradle-3.4.1-all/c3ib5obfnqr0no9szq6qc17do/gradle-3.4.1/bin:$PATH
+
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64
+
+export BASE=/home/ice1000
+
+export PATH=$BASE/SDK/flutter/bin:$PATH
+export PATH=$BASE/.gradle/wrapper/dists/gradle-3.4.1-all/c3ib5obfnqr0no9szq6qc17do/gradle-3.4.1/bin:$PATH
 export PATH=/usr/local/cuda/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64/
 export PATH=/opt/ghc/bin:$PATH
 export PATH=/opt/cabal/bin:$PATH
-export PATH=/home/ice1000/SDK/flutter/bin/cache/dart-sdk/bin:$PATH
-export PATH=/home/ice1000/SDK:$PATH
-export PATH=/home/ice1000/SDK/4.0/bin:$PATH
-export PATH=/home/ice1000/.cabal/bin:$PATH
-export ANDROID_HOME=/home/ice1000/SDK/tools/
+export PATH=$BASE/SDK/flutter/bin/cache/dart-sdk/bin:$PATH
+export PATH=$BASE/SDK:$PATH
+export PATH=$BASE/SDK/4.0/bin:$PATH
+export PATH=$BASE/.cabal/bin:$PATH
+export PATH=$BASE/IDE/idea-IC-172.3544.35/plugins/Kotlin/kotlinc/bin:$PATH
+
+export ANDROID_HOME=$BASE/SDK/tools
+
+export AGDA_STDLIB=$BASE/SDK/agda-stdlib
+export AGDA_HOME=$BASE/.cabal/share/x86_64-linux-ghc-8.2.1/Agda-2.5.3/lib/prim
 
 # added by travis gem
-[ -f /home/ice1000/.travis/travis.sh ] && source /home/ice1000/.travis/travis.sh
+[ -f $BASE/.travis/travis.sh ] && source $BASE/.travis/travis.sh
+

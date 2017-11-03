@@ -1,0 +1,8 @@
+[user]
+        name = ice1000
+        email = ice1000kotlin@foxmail.com
+[core]
+        autocrlf = input
+        editor = emacs
+[push]
+        default = simple

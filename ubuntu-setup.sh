@@ -61,5 +61,5 @@ echo "standard-library" >> ~/.agda/defaults
 ## installing kotlin, gradle
 curl -s "https://get.sdkman.io" | bash
 source ~/.sdkman/bin/sdkman-init.sh
-sdk install kotlinc
+sdk install kotlin
 sdk install gradle

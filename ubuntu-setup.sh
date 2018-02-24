@@ -17,7 +17,7 @@ cd ..
 ## installing rust, cargo
 curl -sSf https://static.rust-lang.org/rustup.sh | sh
 
-## installing peek, konsole, emacs, haskell, java, clang, llvm, texlive, fira-code, themes, 7z
+## installing peek, konsole, emacs, haskell, java, clang, llvm, texlive, themes, 7z
 wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
 sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu xenial-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'
 sudo add-apt-repository ppa:ubuntu-elisp/ppa
@@ -25,20 +25,24 @@ sudo add-apt-repository ppa:peek-developers/stable
 sudo add-apt-repository ppa:hvr/ghc
 sudo add-apt-repository ppa:noobslab/themes
 sudo add-apt-repository ppa:noobslab/icons
-sudo add-apt-repository universe
 sudo apt update
 sudo apt upgrade
 sudo apt install konsole emacs25 cabal-install-2.2 ghc-8.4.1 \
  openjdk-8-jdk openjdk-8-source openjfx openjfx-source peek zlib1g-dev \
- libncurses5-dev clang-4.0 llvm-4.0 texlive fonts-firacode unity-tweak-tool \
+ libncurses5-dev clang-4.0 llvm-4.0 texlive unity-tweak-tool \
  ubuntu-tweak flatabulous-theme ultra-flat-icons ultra-flat-icons-orange p7zip-full
 
-## installing sarasa-gothic
+## installing sarasa-gothic, fira-code
 cd Documents
 wget https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.5.1/sarasa-gothic-ttf-0.5.1.7z
 7z x sarasa-gothic-ttf-0.5.1.7z
 rm sarasa-gothic-ttf-0.5.1.7z
 sudo mv sarasa-* /usr/local/share/fonts/
+mkdir -p ~/.local/share/fonts
+for type in Bold Light Medium Regular Retina; do
+    wget -O ~/.local/share/fonts/FiraCode-${type}.ttf \
+    "https://github.com/tonsky/FiraCode/blob/master/distr/ttf/FiraCode-${type}.ttf?raw=true";
+done
 fc-cache -f -v
 cd ..
 

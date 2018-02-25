@@ -59,7 +59,7 @@
  '(nyan-mode nil)
  '(package-selected-packages
 	 (quote
-		(easy-jekyll figlet hlinum gh-md w3m mwe-log-commands nyan-mode neotree git-commit electric-operator chinese-word-at-point indent-info mines paredit-everywhere paredit flycheck-kotlin flycheck-julia flycheck-haskell flycheck-color-mode-line flycheck-clang-tidy flycheck-clang-analyzer flycheck-ocaml flycheck-rust zone-sl latex-extra auctex yaml-mode zone-rainbow zone-nyan scala-mode sbt-mode rust-mode ruby-test-mode mode-icons markdown-preview-mode markdown-mode+ llvm-mode kotlin-mode jekyll-modes j-mode indent-guide idris-mode ibuffer-git haskell-mode groovy-mode go-mode elm-mode dart-mode d-mode csharp-mode bing-dict ace-flyspell ac-c-headers)))
+		(brainfuck-mode easy-jekyll figlet hlinum gh-md w3m mwe-log-commands nyan-mode neotree git-commit electric-operator chinese-word-at-point indent-info mines paredit-everywhere paredit flycheck-kotlin flycheck-julia flycheck-haskell flycheck-color-mode-line flycheck-clang-tidy flycheck-clang-analyzer flycheck-ocaml flycheck-rust zone-sl latex-extra auctex yaml-mode zone-rainbow zone-nyan scala-mode sbt-mode rust-mode ruby-test-mode mode-icons markdown-preview-mode markdown-mode+ llvm-mode kotlin-mode jekyll-modes j-mode indent-guide idris-mode ibuffer-git haskell-mode groovy-mode go-mode elm-mode dart-mode d-mode csharp-mode bing-dict ace-flyspell ac-c-headers)))
  '(paredit-mode t)
  '(show-paren-mode t)
  '(size-indication-mode t)
@@ -131,6 +131,7 @@
 
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
+(global-unset-key (kbd "C-z"))
 
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 

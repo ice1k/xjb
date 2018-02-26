@@ -27,7 +27,7 @@ sudo add-apt-repository ppa:noobslab/themes
 sudo add-apt-repository ppa:noobslab/icons
 sudo apt update
 sudo apt upgrade
-sudo apt install konsole emacs25 cabal-install-2.2 ghc-8.4.1 \
+sudo apt install konsole emacs25 cabal-install-2.2 ghc-8.2.1 \
  openjdk-8-jdk openjdk-8-source openjfx openjfx-source peek zlib1g-dev \
  libncurses5-dev clang-4.0 llvm-4.0 texlive unity-tweak-tool \
  ubuntu-tweak flatabulous-theme ultra-flat-icons ultra-flat-icons-orange p7zip-full
@@ -48,7 +48,8 @@ cd ..
 
 ## installing agda
 cabal update
-cabal install alex happy cpphs Agda
+cabal install alex happy cpphs
+cabal install --allow-newer Agda
 agda-mode setup
 agda-mode compile
 mkdir ~/SDK

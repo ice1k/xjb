@@ -48,7 +48,7 @@ cd ..
 
 ## installing agda
 cabal update
-cabal install Alex Happy cpphs Agda
+cabal install alex happy cpphs Agda
 agda-mode setup
 agda-mode compile
 mkdir ~/SDK

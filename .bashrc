@@ -100,29 +100,26 @@ export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64
 
-export BASE=/home/ice1000
-export SDK=$BASE/SDK
+export SDK=~/SDK
 
+export PATH=~/.sdkman/candidates/gradle/4.5.1
+export PATH=~/.sdkman/candidates/gradle/4.5.1
 export PATH=$SDK/flutter/bin:$PATH
-export PATH=$BASE/.gradle/wrapper/dists/gradle-3.4.1-all/c3ib5obfnqr0no9szq6qc17do/gradle-3.4.1/bin:$PATH
 export PATH=/usr/local/cuda/bin:$PATH
 export PATH=/opt/ghc/bin:$PATH
 export PATH=/opt/cabal/bin:$PATH
 export PATH=$SDK/flutter/bin/cache/dart-sdk/bin:$PATH
 export PATH=$SDK:$PATH
-export PATH=$SDK/4.0/bin:$PATH
-export PATH=$BASE/.cabal/bin:$PATH
-export PATH=$BASE/IDE/idea-IC-172.3544.35/plugins/Kotlin/kotlinc/bin:$PATH
+export PATH=~/.cabal/bin:$PATH
 export PATH=$SDK/Isabelle2017/bin:$PATH
 export PATH=$SDK/Isabelle2017:$PATH
 
 export ANDROID_HOME=$SDK/tools
 
 export AGDA_STDLIB=$SDK/agda-stdlib
-export AGDA_HOME=$BASE/.cabal/share/x86_64-linux-ghc-8.2.1/Agda-2.5.3/lib/prim
+export AGDA_HOME=~/.cabal/share/x86_64-linux-ghc-8.2.1/Agda-2.5.3/lib/prim
 
 export ISABELLE_HOME=$SDK/Isabelle2017
 
 # added by travis gem
-[ -f $BASE/.travis/travis.sh ] && source $BASE/.travis/travis.sh
-
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh

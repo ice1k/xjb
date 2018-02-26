@@ -39,7 +39,6 @@
  '(ac-modes
 	 (quote
 		(emacs-lisp-mode lisp-mode lisp-interaction-mode slime-repl-mode nim-mode c-mode cc-mode c++-mode objc-mode swift-mode go-mode java-mode malabar-mode clojure-mode clojurescript-mode scala-mode scheme-mode ocaml-mode tuareg-mode coq-mode haskell-mode agda-mode agda2-mode perl-mode cperl-mode python-mode ruby-mode lua-mode tcl-mode ecmascript-mode javascript-mode js-mode js-jsx-mode js2-mode js2-jsx-mode coffee-mode php-mode css-mode scss-mode less-css-mode elixir-mode makefile-mode sh-mode fortran-mode f90-mode ada-mode xml-mode sgml-mode web-mode ts-mode sclang-mode verilog-mode qml-mode apples-mode markdown-mode dart-mode shell-mode kotlin-mode haskell-mode fundamental-mode rust-mode yaml-mode csharp-mode latex-mode llvm-mode nxml-mode idris-mode makefile-mode groovy-mode html-mode)))
- '(blink-cursor-mode t)
  '(column-number-mode t)
  '(custom-enabled-themes nil)
  '(display-time-mode t)
@@ -59,7 +58,7 @@
  '(nyan-mode nil)
  '(package-selected-packages
 	 (quote
-		(brainfuck-mode easy-jekyll figlet hlinum gh-md w3m mwe-log-commands nyan-mode neotree git-commit electric-operator chinese-word-at-point indent-info mines paredit-everywhere paredit flycheck-kotlin flycheck-julia flycheck-haskell flycheck-color-mode-line flycheck-clang-tidy flycheck-clang-analyzer flycheck-ocaml flycheck-rust zone-sl latex-extra auctex yaml-mode zone-rainbow zone-nyan scala-mode sbt-mode rust-mode ruby-test-mode mode-icons markdown-preview-mode markdown-mode+ llvm-mode kotlin-mode jekyll-modes j-mode indent-guide idris-mode ibuffer-git haskell-mode groovy-mode go-mode elm-mode dart-mode d-mode csharp-mode bing-dict ace-flyspell ac-c-headers)))
+		(gradle-mode brainfuck-mode easy-jekyll figlet hlinum gh-md w3m mwe-log-commands nyan-mode neotree git-commit electric-operator chinese-word-at-point indent-info mines paredit-everywhere paredit flycheck-kotlin flycheck-julia flycheck-haskell flycheck-color-mode-line flycheck-clang-tidy flycheck-clang-analyzer flycheck-ocaml flycheck-rust zone-sl latex-extra auctex yaml-mode zone-rainbow zone-nyan scala-mode sbt-mode rust-mode ruby-test-mode mode-icons markdown-preview-mode markdown-mode+ llvm-mode kotlin-mode jekyll-modes j-mode indent-guide idris-mode ibuffer-git haskell-mode groovy-mode go-mode elm-mode dart-mode d-mode csharp-mode bing-dict ace-flyspell ac-c-headers)))
  '(paredit-mode t)
  '(show-paren-mode t)
  '(size-indication-mode t)

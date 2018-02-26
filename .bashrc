@@ -102,8 +102,8 @@ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64
 
 export SDK=~/SDK
 
-export PATH=~/.sdkman/candidates/gradle/4.5.1
-export PATH=~/.sdkman/candidates/gradle/4.5.1
+export PATH=~/.sdkman/candidates/kotlin/current/bin:$PATH
+export PATH=~/.sdkman/candidates/gradle/current/bin:$PATH
 export PATH=$SDK/flutter/bin:$PATH
 export PATH=/usr/local/cuda/bin:$PATH
 export PATH=/opt/ghc/bin:$PATH

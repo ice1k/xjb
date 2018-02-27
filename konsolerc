@@ -1,0 +1,28 @@
+[Desktop Entry]
+DefaultProfile=Profile #1.profile
+
+[Favorite Profiles]
+Favorites=
+
+[FileLocation]
+scrollbackUseCacheLocation=true
+scrollbackUseSystemLocation=false
+
+[KonsoleWindow]
+AllowMenuAccelerators=true
+ShowWindowTitleOnTitleBar=true
+
+[MainWindow]
+Height 1080=912
+State=AAAA/wAAAAD9AAAAAAAABz8AAAQGAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1920=1855
+Window-Maximized 1080x1920=true
+Window-Maximized 540x960=true
+Window-Maximized 600x800=true
+Window-Maximized 720x960=true
+Window-Maximized 768x1024=true
+Window-Maximized 864x1152=true
+
+[TabBar]
+TabBarPosition=Top

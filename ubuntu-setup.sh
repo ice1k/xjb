@@ -31,8 +31,8 @@ sudo apt update
 sudo apt upgrade
 sudo apt install konsole emacs25 cabal-install-2.2 ghc-8.2.1 \
  openjdk-8-jdk openjdk-8-source openjfx openjfx-source peek zlib1g-dev \
- libncurses5-dev clang-4.0 llvm-4.0 texlive p7zip-full ubuntu-tweak \
- flatabulous-theme ultra-flat-icons ultra-flat-icons-orange
+ libncurses5-dev clang-4.0 llvm-4.0 texlive texlive-xetex p7zip-full \
+ ubuntu-tweak flatabulous-theme ultra-flat-icons ultra-flat-icons-orange
 
 ## installing sarasa-gothic, fira-code
 cd Documents

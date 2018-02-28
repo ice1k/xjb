@@ -33,14 +33,14 @@ sudo apt install konsole emacs25 cabal-install-2.2 ghc-8.2.1 \
  openjdk-8-jdk openjdk-8-source openjfx openjfx-source peek zlib1g-dev \
  libncurses5-dev clang-4.0 llvm-4.0 texlive texlive-xetex p7zip-full \
  ubuntu-tweak flatabulous-theme ultra-flat-icons ultra-flat-icons-orange \
- ruby2.3 ruby2.3-tcltk gem
+ ruby2.3 ruby2.3-tcltk ruby2.3-dev gem
 
 ## installing jekyll, bundler, my blog
 sudo gem install bundler
 cd Public
 git clone https://github.com/ice1000/ice1000.github.io.git
 cd ice1000.github.io
-bundle install
+bundle install # may require sudo
 bundler exec jekyll build
 cd ..
 

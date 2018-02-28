@@ -5,12 +5,14 @@ echo "Issue tracker: https://github.com/ice1000/xjb-config/issues"
 sudo apt remove libreoffice-common libreoffice-core libreoffice-core-base xterm
 sudo apt autoremove
 
-## installing chrome, gsougou input
+## installing chrome, gsougou input, wps
 cd Downloads
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 wget http://cdn2.ime.sogou.com/dl/index/1509619794/sogoupinyin_2.2.0.0102_amd64.deb
 sudo dpkg -i sogoupinyin_2.2.0.0102_amd64.deb
+wget http://kdl.cc.ksosoft.com/wps-community/download/a21/wps-office_10.1.0.5672~a21_amd64.deb
+sudo dpkg -i wps-office_10.1.0.5672~a21_amd64.deb
 sudo apt -f install
 cd ..
 

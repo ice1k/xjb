@@ -40,6 +40,7 @@ sudo gem install bundler
 cd Public
 git clone https://github.com/ice1000/ice1000.github.io.git
 cd ice1000.github.io
+bundle config mirror.https://rubygems.org https://gems.ruby-china.org
 bundle install # may require sudo
 bundler exec jekyll build
 cd ..

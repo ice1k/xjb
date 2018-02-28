@@ -19,7 +19,7 @@ cd ..
 ## installing rust, cargo
 curl -sSf https://static.rust-lang.org/rustup.sh | sh
 
-## installing peek, konsole, emacs, haskell, java, clang, llvm, texlive, themes, 7z
+## installing peek, konsole, emacs, haskell, java, clang, llvm, texlive, themes, 7z, ruby
 wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
 sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu xenial-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'
 sudo add-apt-repository ppa:ubuntu-elisp/ppa
@@ -32,7 +32,17 @@ sudo apt upgrade
 sudo apt install konsole emacs25 cabal-install-2.2 ghc-8.2.1 \
  openjdk-8-jdk openjdk-8-source openjfx openjfx-source peek zlib1g-dev \
  libncurses5-dev clang-4.0 llvm-4.0 texlive texlive-xetex p7zip-full \
- ubuntu-tweak flatabulous-theme ultra-flat-icons ultra-flat-icons-orange
+ ubuntu-tweak flatabulous-theme ultra-flat-icons ultra-flat-icons-orange \
+ ruby2.3 ruby2.3-tcltk gem
+
+## installing jekyll, bundler, my blog
+sudo gem install bundler
+cd Public
+git clone https://github.com/ice1000/ice1000.github.io.git
+cd ice1000.github.io
+bundle install
+bundler exec jekyll build
+cd ..
 
 ## installing sarasa-gothic, fira-code
 cd Documents

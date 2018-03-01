@@ -13,6 +13,8 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 # sudo dpkg -i sogoupinyin_2.2.0.0102_amd64.deb
 wget http://kdl.cc.ksosoft.com/wps-community/download/a21/wps-office_10.1.0.5672~a21_amd64.deb
 sudo dpkg -i wps-office_10.1.0.5672~a21_amd64.deb
+wget https://github.com/java-decompiler/jd-gui/releases/download/v1.4.0/jd-gui_1.4.0-0_all.deb
+sudo dpkg -i jd-gui_1.4.0-0_all.deb
 sudo apt -f install
 cd ..
 

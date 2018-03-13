@@ -27,6 +27,7 @@ sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu xenial-getdeb apps" >> /e
 sudo add-apt-repository ppa:ubuntu-elisp/ppa
 sudo add-apt-repository ppa:peek-developers/stable
 sudo add-apt-repository ppa:hvr/ghc
+sudo add-apt-repository ppa:git-core/ppa
 sudo add-apt-repository ppa:noobslab/themes
 sudo add-apt-repository ppa:noobslab/icons
 sudo apt update
@@ -36,7 +37,7 @@ sudo apt install konsole emacs25 cabal-install-2.2 ghc-8.2.1 \
  libncurses5-dev clang-4.0 llvm-4.0 texlive texlive-xetex p7zip-full \
  ubuntu-tweak flatabulous-theme ultra-flat-icons ultra-flat-icons-orange \
  ruby2.3 ruby2.3-tcltk ruby2.3-dev gem compizconfig-settings-manager \
- tree screenfetch
+ tree screenfetch git
 screenfetch
 
 ## installing jekyll, bundler, my blog
@@ -81,3 +82,4 @@ curl -s "https://get.sdkman.io" | bash
 source ~/.sdkman/bin/sdkman-init.sh
 sdk install kotlin
 sdk install gradle
+sdk install maven

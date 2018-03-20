@@ -96,6 +96,9 @@ sdk install maven
 git clone https://github.com/zig-lang/zig.git
 cd zig
 ci/travis_linux_before_install
-ci/travis_linux_install
+# ci/travis_linux_install # evil
+sudo apt-get install -y clang-6.0 libclang-6.0 libclang-6.0-dev llvm-6.0 \
+ llvm-6.0-dev liblld-6.0 liblld-6.0-dev cmake wine1.6-amd64
+
 ci/travis_linux_script
 

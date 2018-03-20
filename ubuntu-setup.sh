@@ -5,23 +5,31 @@ echo "Issue tracker: https://github.com/ice1000/xjb-config/issues"
 sudo apt remove libreoffice-common libreoffice-core libreoffice-core-base xterm
 sudo apt autoremove
 
-## installing chrome, sougou input (not working), wps
+## installing some debs
 cd Downloads
+## installing chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
+## installing sougou input (not working)
 # wget http://cdn2.ime.sogou.com/dl/index/1509619794/sogoupinyin_2.2.0.0102_amd64.deb
 # sudo dpkg -i sogoupinyin_2.2.0.0102_amd64.deb
+## installing wps
 wget http://kdl.cc.ksosoft.com/wps-community/download/a21/wps-office_10.1.0.5672~a21_amd64.deb
 sudo dpkg -i wps-office_10.1.0.5672~a21_amd64.deb
+## installing jd-gui
 wget https://github.com/java-decompiler/jd-gui/releases/download/v1.4.0/jd-gui_1.4.0-0_all.deb
 sudo dpkg -i jd-gui_1.4.0-0_all.deb
+## installing libjsoncpp0 (required by zig)
+http://mirrors.xmission.com/ubuntu/pool/universe/libj/libjsoncpp/libjsoncpp0_0.6.0~rc2-3ubuntu1_amd64.deb
+sudo dpkg -i libjsoncpp0_0.6.0~rc2-3ubuntu1_amd64.deb
+## install dependencies
 sudo apt -f install
 cd ..
 
 ## installing rust, cargo
 curl -sSf https://static.rust-lang.org/rustup.sh | sh
 
-## installing peek, konsole, emacs, haskell, java, clang, llvm, texlive, themes, 7z, ruby
+## installing peek, konsole, emacs, haskell, java, git, texlive, themes, 7z, ruby
 wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
 sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu xenial-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'
 sudo add-apt-repository ppa:ubuntu-elisp/ppa
@@ -30,14 +38,14 @@ sudo add-apt-repository ppa:hvr/ghc
 sudo add-apt-repository ppa:git-core/ppa
 sudo add-apt-repository ppa:noobslab/themes
 sudo add-apt-repository ppa:noobslab/icons
+sudo add-apt-repository ppa:git-core/ppa
 sudo apt update
 sudo apt upgrade
 sudo apt install konsole emacs25 cabal-install-2.2 ghc-8.2.1 \
  openjdk-8-jdk openjdk-8-source openjfx openjfx-source peek zlib1g-dev \
- libncurses5-dev clang-4.0 llvm-4.0 texlive texlive-xetex p7zip-full \
+ libncurses5-dev texlive texlive-xetex p7zip-full tree screenfetch git \
  ubuntu-tweak flatabulous-theme ultra-flat-icons ultra-flat-icons-orange \
- ruby2.3 ruby2.3-tcltk ruby2.3-dev gem compizconfig-settings-manager \
- tree screenfetch git
+ ruby2.3 ruby2.3-tcltk ruby2.3-dev gem compizconfig-settings-manager
 screenfetch
 
 ## installing jekyll, bundler, my blog
@@ -83,3 +91,11 @@ source ~/.sdkman/bin/sdkman-init.sh
 sdk install kotlin
 sdk install gradle
 sdk install maven
+
+## installing zig
+git clone https://github.com/zig-lang/zig.git
+cd zig
+ci/travis_linux_before_install
+ci/travis_linux_install
+ci/travis_linux_script
+

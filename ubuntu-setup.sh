@@ -60,9 +60,9 @@ cd ..
 
 ## installing sarasa-gothic, fira-code
 cd Documents
-wget https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.5.1/sarasa-gothic-ttf-0.5.1.7z
-7z x sarasa-gothic-ttf-0.5.1.7z
-rm sarasa-gothic-ttf-0.5.1.7z
+wget https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.5.2/sarasa-gothic-ttf-0.5.2.7z
+7z x sarasa-gothic-ttf-0.5.2.7z
+rm sarasa-gothic-ttf-0.5.2.7z
 sudo mv sarasa-* /usr/local/share/fonts/
 mkdir -p ~/.local/share/fonts
 for type in Bold Light Medium Regular Retina; do

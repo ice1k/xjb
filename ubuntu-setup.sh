@@ -19,9 +19,12 @@ sudo dpkg -i wps-office_10.1.0.5672~a21_amd64.deb
 ## installing jd-gui
 wget https://github.com/java-decompiler/jd-gui/releases/download/v1.4.0/jd-gui_1.4.0-0_all.deb
 sudo dpkg -i jd-gui_1.4.0-0_all.deb
+## installing bat
+wget https://github.com/sharkdp/bat/releases/download/v0.6.1/bat-musl_0.6.1_amd64.deb
+sudo dpkg -i bat-musl_0.6.1_amd64.deb
 ## installing libjsoncpp0 (required by zig)
-http://mirrors.xmission.com/ubuntu/pool/universe/libj/libjsoncpp/libjsoncpp0_0.6.0~rc2-3ubuntu1_amd64.deb
-sudo dpkg -i libjsoncpp0_0.6.0~rc2-3ubuntu1_amd64.deb
+# wget http://mirrors.xmission.com/ubuntu/pool/universe/libj/libjsoncpp/libjsoncpp0_0.6.0~rc2-3ubuntu1_amd64.deb
+# sudo dpkg -i libjsoncpp0_0.6.0~rc2-3ubuntu1_amd64.deb
 ## install dependencies
 sudo apt -f install
 cd ..
@@ -39,13 +42,14 @@ sudo add-apt-repository ppa:git-core/ppa
 sudo add-apt-repository ppa:noobslab/themes
 sudo add-apt-repository ppa:noobslab/icons
 sudo add-apt-repository ppa:git-core/ppa
+sudo apt-add-repository ppa:brightbox/ruby-ng
 sudo apt update
 sudo apt upgrade
 sudo apt install konsole emacs25 cabal-install-2.2 ghc-8.2.1 \
  openjdk-8-jdk openjdk-8-source openjfx openjfx-source peek zlib1g-dev \
  libncurses5-dev texlive texlive-xetex p7zip-full tree screenfetch git \
  ubuntu-tweak flatabulous-theme ultra-flat-icons ultra-flat-icons-orange \
- ruby2.3 ruby2.3-tcltk ruby2.3-dev gem compizconfig-settings-manager
+ ruby2.5 ruby2.5-tcltk ruby2.5-dev gem compizconfig-settings-manager
 screenfetch
 
 ## installing jekyll, bundler, my blog
@@ -60,9 +64,9 @@ cd ..
 
 ## installing sarasa-gothic, fira-code
 cd Documents
-wget https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.5.2/sarasa-gothic-ttf-0.5.2.7z
-7z x sarasa-gothic-ttf-0.5.2.7z
-rm sarasa-gothic-ttf-0.5.2.7z
+wget https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.6.0/sarasa-gothic-ttf-0.6.0.7z
+7z x sarasa-gothic-ttf-0.6.0.7z
+rm sarasa-gothic-ttf-0.6.0.7z
 sudo mv sarasa-* /usr/local/share/fonts/
 mkdir -p ~/.local/share/fonts
 for type in Bold Light Medium Regular Retina; do

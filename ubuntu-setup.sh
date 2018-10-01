@@ -14,14 +14,14 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 # wget http://cdn2.ime.sogou.com/dl/index/1509619794/sogoupinyin_2.2.0.0102_amd64.deb
 # sudo dpkg -i sogoupinyin_2.2.0.0102_amd64.deb
 ## installing wps
-wget http://kdl.cc.ksosoft.com/wps-community/download/a21/wps-office_10.1.0.5672~a21_amd64.deb
-sudo dpkg -i wps-office_10.1.0.5672~a21_amd64.deb
+wget http://kdl.cc.ksosoft.com/wps-community/download/6757/wps-office_10.1.0.6757_amd64.deb
+sudo dpkg -i wps-office_10.1.0.6757_amd64.deb
 ## installing jd-gui
 wget https://github.com/java-decompiler/jd-gui/releases/download/v1.4.0/jd-gui_1.4.0-0_all.deb
 sudo dpkg -i jd-gui_1.4.0-0_all.deb
 ## installing bat
-wget https://github.com/sharkdp/bat/releases/download/v0.6.1/bat-musl_0.6.1_amd64.deb
-sudo dpkg -i bat-musl_0.6.1_amd64.deb
+wget https://github.com/sharkdp/bat/releases/download/v0.6.1/bat-musl_0.7.1_amd64.deb
+sudo dpkg -i bat-musl_0.7.1_amd64.deb
 ## installing libjsoncpp0 (required by zig)
 # wget http://mirrors.xmission.com/ubuntu/pool/universe/libj/libjsoncpp/libjsoncpp0_0.6.0~rc2-3ubuntu1_amd64.deb
 # sudo dpkg -i libjsoncpp0_0.6.0~rc2-3ubuntu1_amd64.deb

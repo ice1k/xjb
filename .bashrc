@@ -64,8 +64,6 @@ if [ -f ~/.tokens ]; then
     . ~/.tokens
 fi
 
-PS1="\[\033[34m\]\w\[\033[0m\] \[\033[33m\]λ>\[\033[0m\] "
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -76,6 +74,8 @@ if ! shopt -oq posix; then
 	. /etc/bash_completion
     fi
 fi
+
+PS1="\[\033[34m\]\w\[\033[0m\]\[\033[30m\]\$(__git_ps1 '|%s')\[\033[0m\] \[\033[33m\]λ>\[\033[0m\] "
 
 alias ec="emacsclient -nw"
 alias en="emacs -nw"

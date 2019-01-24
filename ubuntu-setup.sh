@@ -20,8 +20,8 @@ sudo dpkg -i wps-office_10.1.0.6757_amd64.deb
 wget https://github.com/java-decompiler/jd-gui/releases/download/v1.4.0/jd-gui_1.4.0-0_all.deb
 sudo dpkg -i jd-gui_1.4.0-0_all.deb
 ## installing bat
-wget https://github.com/sharkdp/bat/releases/download/v0.6.1/bat-musl_0.7.1_amd64.deb
-sudo dpkg -i bat-musl_0.7.1_amd64.deb
+wget https://github.com/sharkdp/bat/releases/download/v0.9.0/bat-musl_0.9.0_amd64.deb
+sudo dpkg -i bat-musl_0.9.0_amd64.deb
 ## installing libjsoncpp0 (required by zig)
 # wget http://mirrors.xmission.com/ubuntu/pool/universe/libj/libjsoncpp/libjsoncpp0_0.6.0~rc2-3ubuntu1_amd64.deb
 # sudo dpkg -i libjsoncpp0_0.6.0~rc2-3ubuntu1_amd64.deb
@@ -31,6 +31,9 @@ cd ..
 
 ## installing rust, cargo
 curl -sSf https://static.rust-lang.org/rustup.sh | sh
+
+## installing haskell-stack
+# wget -qO- https://get.haskellstack.org/ | sh
 
 ## installing peek, konsole, emacs, haskell, java, git, texlive, themes, 7z, ruby
 wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
@@ -45,11 +48,10 @@ sudo add-apt-repository ppa:git-core/ppa
 sudo apt-add-repository ppa:brightbox/ruby-ng
 sudo apt update
 sudo apt upgrade
-sudo apt install konsole emacs25 cabal-install-2.2 ghc-8.2.1 \
- openjdk-8-jdk openjdk-8-source openjfx openjfx-source peek zlib1g-dev \
+sudo apt install konsole emacs25 ghc-8.4.4 cabal-install-2.4 libicu-dev \
+ openjdk-11-jdk openjdk-11-source openjfx openjfx-source peek zlib1g-dev \
  libncurses5-dev texlive texlive-xetex p7zip-full tree screenfetch git \
- ubuntu-tweak flatabulous-theme ultra-flat-icons ultra-flat-icons-orange \
- ruby2.5 ruby2.5-tcltk ruby2.5-dev gem compizconfig-settings-manager
+ ruby2.5 ruby2.5-dev gem compizconfig-settings-manager
 screenfetch
 
 ## installing jekyll, bundler, my blog
@@ -64,9 +66,9 @@ cd ..
 
 ## installing sarasa-gothic, fira-code
 cd Documents
-wget https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.6.0/sarasa-gothic-ttf-0.6.0.7z
-7z x sarasa-gothic-ttf-0.6.0.7z
-rm sarasa-gothic-ttf-0.6.0.7z
+wget https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.7.0/sarasa-gothic-ttf-0.7.0.7z
+7z x sarasa-gothic-ttf-0.7.0.7z
+rm sarasa-gothic-ttf-0.7.0.7z
 sudo mv sarasa-* /usr/local/share/fonts/
 mkdir -p ~/.local/share/fonts
 for type in Bold Light Medium Regular Retina; do
@@ -77,17 +79,22 @@ fc-cache -f -v
 cd ..
 
 ## installing agda
+mkdir ~/SDK
 cabal update
-cabal install alex happy cpphs
-cabal install --allow-newer Agda
+cabal install alex happy
+git clone https://github.com/agda/agda.git ~/SDK/agda/
+cd ~/SDK/agda
+cabal install
+cd -
 agda-mode setup
 agda-mode compile
-mkdir ~/SDK
 git clone https://github.com/agda/agda-stdlib.git ~/SDK/agda-stdlib/
-rm ~/SDK/agda-stdlib/src/index.agda
+git clone https://github.com/agda/cubical.git ~/SDK/agda-cubical/
 mkdir ~/.agda
 echo "~/SDK/agda-stdlib/standard-library.agda-lib" >> ~/.agda/libraries
+echo "~/SDK/agda-cubical/cubical.agda-lib" >> ~/.agda/libraries
 echo "standard-library" >> ~/.agda/defaults
+echo "cubical" >> ~/.agda/defaults
 
 ## installing kotlin, gradle
 curl -s "https://get.sdkman.io" | bash

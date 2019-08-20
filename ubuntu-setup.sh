@@ -20,8 +20,8 @@ sudo dpkg -i wps-office_10.1.0.6757_amd64.deb
 wget https://github.com/java-decompiler/jd-gui/releases/download/v1.4.0/jd-gui_1.4.0-0_all.deb
 sudo dpkg -i jd-gui_1.4.0-0_all.deb
 ## installing bat
-wget https://github.com/sharkdp/bat/releases/download/v0.9.0/bat-musl_0.9.0_amd64.deb
-sudo dpkg -i bat-musl_0.9.0_amd64.deb
+wget https://github.com/sharkdp/bat/releases/download/v0.11.0/bat-musl_0.11.0_amd64.deb
+sudo dpkg -i bat-musl_0.11.0_amd64.deb
 ## installing libjsoncpp0 (required by zig)
 # wget http://mirrors.xmission.com/ubuntu/pool/universe/libj/libjsoncpp/libjsoncpp0_0.6.0~rc2-3ubuntu1_amd64.deb
 # sudo dpkg -i libjsoncpp0_0.6.0~rc2-3ubuntu1_amd64.deb
@@ -44,7 +44,6 @@ sudo add-apt-repository ppa:hvr/ghc
 sudo add-apt-repository ppa:git-core/ppa
 sudo add-apt-repository ppa:noobslab/themes
 sudo add-apt-repository ppa:noobslab/icons
-sudo add-apt-repository ppa:git-core/ppa
 sudo apt-add-repository ppa:brightbox/ruby-ng
 sudo apt update
 sudo apt upgrade
@@ -66,9 +65,9 @@ cd ..
 
 ## installing sarasa-gothic, fira-code
 cd Documents
-wget https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.7.0/sarasa-gothic-ttf-0.7.0.7z
-7z x sarasa-gothic-ttf-0.7.0.7z
-rm sarasa-gothic-ttf-0.7.0.7z
+wget https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.8.1/sarasa-gothic-ttf-0.8.1.7z
+7z x sarasa-gothic-ttf-0.8.1.7z
+rm sarasa-gothic-ttf-0.8.1.7z
 sudo mv sarasa-* /usr/local/share/fonts/
 mkdir -p ~/.local/share/fonts
 for type in Bold Light Medium Regular Retina; do
@@ -84,7 +83,7 @@ cabal update
 cabal install alex happy
 git clone https://github.com/agda/agda.git ~/SDK/agda/
 cd ~/SDK/agda
-cabal install
+make install
 cd -
 agda-mode setup
 agda-mode compile

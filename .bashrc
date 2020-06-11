@@ -75,7 +75,7 @@ if ! shopt -oq posix; then
     fi
 fi
 
-PS1="\[\033[34m\]\w\[\033[0m\]\[\033[30m\]\$(__git_ps1 '|%s')\[\033[0m\] \[\033[33m\]λ>\[\033[0m\] "
+PS1="\[\033[34m\]\w\[\033[0m\]\[\033[20m\]\$(__git_ps1 '|%s')\[\033[0m\] \[\033[33m\]λ>\[\033[0m\] "
 
 alias ec="emacsclient -nw"
 alias en="emacs -nw"

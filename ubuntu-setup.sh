@@ -47,7 +47,7 @@ sudo add-apt-repository ppa:noobslab/icons
 sudo apt-add-repository ppa:brightbox/ruby-ng
 sudo apt update
 sudo apt upgrade
-sudo apt install konsole emacs25 ghc-8.4.4 cabal-install-2.4 libicu-dev \
+sudo apt install konsole emacs25 ghc-8.8.3 cabal-install-3.2 libicu-dev \
  openjdk-11-jdk openjdk-11-source openjfx openjfx-source peek zlib1g-dev \
  libncurses5-dev texlive texlive-xetex p7zip-full tree screenfetch git \
  ruby2.5 ruby2.5-dev gem compizconfig-settings-manager

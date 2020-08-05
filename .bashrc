@@ -81,8 +81,13 @@ alias ec="emacsclient -nw"
 alias en="emacs -nw"
 alias ecw="emacsclient --c"
 alias coffee-machine="emacsclient -nw"
+alias gpl="git pull --prune"
+alias gst="git status"
+alias gco="git checkout"
+alias blog="bundler exec jekyll s"
+alias cabal-deps="cabal v1-install --upgrade-dependencies --only-dependencies"
 
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-1..0-openjdk-amd64
 
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64
 
@@ -105,7 +110,7 @@ export PATH=$SDK/Isabelle2017:$PATH
 export ANDROID_HOME=$SDK/tools
 
 export AGDA_STDLIB=$SDK/agda-stdlib
-export AGDA_HOME=~/.cabal/share/x86_64-linux-ghc-8.2.1/Agda-2.5.3/lib/prim
+export AGDA_HOME=~/.cabal/share/x86_64-linux-ghc-8.8.3/Agda-2.6.2/lib/prim
 
 export ISABELLE_HOME=$SDK/Isabelle2017
 

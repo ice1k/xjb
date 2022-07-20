@@ -75,7 +75,7 @@ if ! shopt -oq posix; then
     fi
 fi
 
-PS1="\[\033[34m\]\w\[\033[0m\]\[\033[20m\]\$(__git_ps1 '|%s')\[\033[0m\] \[\033[33m\]λ>\[\033[0m\] "
+PS1="\[\033[34m\]\w\[\033[0m\]\[\033[20m\]\$(__git_ps1 ' (%s)')\[\033[0m\] \[\033[33m\]λ>\[\033[0m\] "
 
 alias ec="emacsclient -nw"
 alias en="emacs -nw"
@@ -87,7 +87,7 @@ alias gco="git checkout"
 alias blog="bundler exec jekyll s"
 alias cabal-deps="cabal v1-install --upgrade-dependencies --only-dependencies"
 
-export JAVA_HOME=/usr/lib/jvm/java-1..0-openjdk-amd64
+# export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
 
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64
 

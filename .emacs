@@ -14,9 +14,6 @@
 (setq display-time-day-and-date t)
 (setq display-time-use-mail-icon t)
 (setq display-time-interval 10)
-(display-time-mode 1)
-(setq display-time-24hr-format t)
-(setq display-time-day-and-date t)
 
 (setq-default make-backup-files nil)
 (setq buffer-file-coding-system 'utf-8)
@@ -28,6 +25,19 @@
 (setq package-archives
       '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
 				("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+(global-unset-key (kbd "C-z"))
+
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
+(run-at-time nil (* 3 60) 'recentf-save-list)
+
+;; UTF-8 support
+(prefer-coding-system       'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(server-start)
 
 (package-initialize)
 (custom-set-variables
@@ -116,27 +126,13 @@
 	 '(85 . 80) '(100 . 100)))))
 (global-set-key (kbd "C-c t") 'toggle-transparency)
 
-(recentf-mode 1)
-(setq recentf-max-menu-items 25)
-(global-set-key "\C-x\ \C-r" 'recentf-open-files)
-(run-at-time nil (* 3 60) 'recentf-save-list)
-
-;; UTF-8 support
-(prefer-coding-system       'utf-8)
-(set-default-coding-systems 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-
 (setq x-select-request-type '(UTF8_STRING COMPOUND_TEXT TEXT STRING))
 (thing-at-point 'chinese-or-other-word)
 
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
-(global-unset-key (kbd "C-z"))
 
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-
-(server-start)
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (autoload 'ibuffer "ibuffer" "List buffers." t)

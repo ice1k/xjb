@@ -30,7 +30,9 @@
 # Math
 
 <Multi_key> <Multi_key> <m> <a> <p> <s> <t> <o> : "↦" U21A6 # mapsto
+<Multi_key> <bar> <minus> <greater> : "↦" U21A6 # mapsto
 <Multi_key> <Multi_key> <v> <d> <a> <s> <h> : "⊢" # Turnstile or vdash
+<Multi_key> <bar> <minus> <minus> : "⊢" # Turnstile or vdash
 
 # Already defined:
 # <Multi_key> <minus> <minus> <equal> : "−"    U2212 # MINUS SIGN

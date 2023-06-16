@@ -21,7 +21,7 @@
 <Multi_key> <h> <w> : "Hello, world!"
 
 # Konami code
-# <Multi_key> <Multi_key> <Up> <Up> <Down> <Down> <Left> <Right> <Left> <Right> <b> <a> : "ᕙ༼ຈل͜ຈ༽ᕗ" # Mighty Donger
+<Multi_key> <Multi_key> <Up> <Up> <Down> <Down> <Left> <Right> <Left> <Right> <b> <a> : "ᕙ༼ຈل͜ຈ༽ᕗ" # Mighty Donger
 
 # Russian Ruble sign
 # <Multi_key> <P> <minus> : "₽"    U20bd # RUBLE SIGN
@@ -30,9 +30,15 @@
 # Math
 
 <Multi_key> <Multi_key> <m> <a> <p> <s> <t> <o> : "↦" U21A6 # mapsto
-<Multi_key> <bar> <minus> <greater> : "↦" U21A6 # mapsto
 <Multi_key> <Multi_key> <v> <d> <a> <s> <h> : "⊢" # Turnstile or vdash
+<Multi_key> <Multi_key> <s> <i> <m> <e> <q> : "≃" # simeq
+
+<Multi_key> <bar> <minus> <greater> : "↦" U21A6 # mapsto
 <Multi_key> <bar> <minus> <minus> : "⊢" # Turnstile or vdash
+<Multi_key> <asciitilde> <minus> : "≃" # simeq
+
+<Multi_key> <Multi_key> <y> <o> : "よ" # Yoneda
+<Multi_key> <Multi_key> <m> <m> : "ん" # M?
 
 # Already defined:
 # <Multi_key> <minus> <minus> <equal> : "−"    U2212 # MINUS SIGN

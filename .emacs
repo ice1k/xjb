@@ -26,6 +26,13 @@
       '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
 				("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 (global-unset-key (kbd "C-z"))
+(global-unset-key (kbd "C-c C-k"))
+
+(when (string-prefix-p "agda" (shell-command-to-string "agda version") t)
+  (load-file
+   (let ((coding-system-for-read 'utf-8))
+     (shell-command-to-string "agda-mode locate")))
+  (add-to-list 'auto-mode-alist '("\\.lagda.md\\'" . agda2-mode)))
 
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
@@ -106,11 +113,6 @@
 ;;   (progn
 ;;     (require 'flycheck-kotlin)
 ;;     (flycheck-kotlin-setup)))
-
-(if (string-prefix-p "agda" (shell-command-to-string "agda version") t)
-		(load-file
-		 (let ((coding-system-for-read 'utf-8))
-			 (shell-command-to-string "agda-mode locate"))))
 
 (set-frame-parameter (selected-frame) 'alpha '(85 80))
 (add-to-list 'default-frame-alist '(alpha . (85 . 80)))

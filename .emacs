@@ -28,7 +28,7 @@
 (global-unset-key (kbd "C-z"))
 (global-unset-key (kbd "C-c C-k"))
 
-(when (string-prefix-p "agda" (shell-command-to-string "agda version") t)
+(when (string-prefix-p "agda" (shell-command-to-string "agda --version") t)
   (load-file
    (let ((coding-system-for-read 'utf-8))
      (shell-command-to-string "agda-mode locate")))

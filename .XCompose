@@ -36,7 +36,9 @@
 <Multi_key> <bar> <minus> <greater> : "↦" U21A6 # mapsto
 <Multi_key> <bar> <minus> <minus> : "⊢" # Turnstile or vdash
 <Multi_key> <asciitilde> <minus> : "≃" # simeq
-<Multi_key> <minus> <o> : "⊸" # loli
+<Multi_key> <minus> <o> : "⊸" # lolipop
+<Multi_key> <bar> <bar> <greater> : "▷" # right triangle
+<Multi_key> <equal> <i> <n> : "⋶" # ∈ with a bar
 
 <Multi_key> <Multi_key> <y> <o> : "よ" # Yoneda
 <Multi_key> <Multi_key> <m> <m> : "ん" # M?

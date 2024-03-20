@@ -30,13 +30,14 @@
 # Math
 
 <Multi_key> <Multi_key> <m> <a> <p> <s> <t> <o> : "↦" U21A6 # mapsto
-<Multi_key> <Multi_key> <v> <d> <a> <s> <h> : "⊢" # Turnstile or vdash
+<Multi_key> <Multi_key> <v> <d> <a> <s> <h> : "⊢" # turnstile or vdash
 <Multi_key> <Multi_key> <s> <i> <m> <e> <q> : "≃" # simeq
 
 <Multi_key> <bar> <minus> <greater> : "↦" U21A6 # mapsto
-<Multi_key> <bar> <minus> <minus> : "⊢" # Turnstile or vdash
+<Multi_key> <bar> <minus> <minus> : "⊢" # turnstile or vdash
 <Multi_key> <asciitilde> <minus> : "≃" # simeq
 <Multi_key> <minus> <o> : "⊸" # lolipop
+<Multi_key> <minus> <backslash> : "⇀" # harpoon
 <Multi_key> <bar> <bar> <greater> : "▷" # right triangle
 <Multi_key> <bar> <bar> <less> : "◁" # left triangle
 <Multi_key> <equal> <i> <n> : "⋶" # ∈ with a bar

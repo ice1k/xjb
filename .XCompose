@@ -32,6 +32,7 @@
 <Multi_key> <Multi_key> <m> <a> <p> <s> <t> <o> : "↦" U21A6 # mapsto
 <Multi_key> <Multi_key> <v> <d> <a> <s> <h> : "⊢" # turnstile or vdash
 <Multi_key> <Multi_key> <s> <i> <m> <e> <q> : "≃" # simeq
+<Multi_key> <Multi_key> <exclam> <i> <n> : "∉" # notin
 
 <Multi_key> <bar> <minus> <greater> : "↦" U21A6 # mapsto
 <Multi_key> <bar> <minus> <minus> : "⊢" # turnstile or vdash

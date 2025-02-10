@@ -43,6 +43,7 @@
 <Multi_key> <bar> <bar> <less> : "◁" # left triangle
 <Multi_key> <equal> <i> <n> : "⋶" # ∈ with a bar
 <Multi_key> <asciitilde> <colon> : "∻" # a PFPL thing
+<Multi_key> <U> <plus> : "⊎" # disjointed union
 
 <Multi_key> <Multi_key> <y> <o> : "よ" # Yoneda
 <Multi_key> <Multi_key> <m> <m> : "ん" # M?
